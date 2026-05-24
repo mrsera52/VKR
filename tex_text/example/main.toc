@@ -1,0 +1,38 @@
+\babel@toc {russian}{}\relax 
+\contentsline {structure}{\numberline {}ТЕРМИНЫ~И~ОПРЕДЕЛЕНИЯ}{5}{structure.1}%
+\contentsline {structure}{\numberline {}ПЕРЕЧЕНЬ~СОКРАЩЕНИЙ~И~ОБОЗНАЧЕНИЙ}{6}{structure.2}%
+\contentsline {structure}{\numberline {}ВВЕДЕНИЕ}{7}{structure.3}%
+\contentsline {section}{\numberline {1}ПРЕДМЕТНАЯ ОБЛАСТЬ И ПОСТАНОВКА ЗАДАЧИ}{10}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Рисуночные тесты как инструмент психологической диагностики}{10}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Список психологических черт и канонические признаки рисунка}{10}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Современные подходы к классификации изображений}{10}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Особенности задачи и подход к её решению}{11}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Постановка задачи}{12}{subsection.1.5}%
+\contentsline {section}{\numberline {2}РАЗРАБОТКА ПРОГРАММНОГО КОМПЛЕКСА}{14}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Общая архитектура решения}{14}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Описание датасета и его подготовка}{15}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Модуль предобработки изображений}{16}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Архитектура нейросетевой модели}{17}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Функции потерь и стратегия обучения}{20}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Словарь интерпретаций признаков}{22}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Генератор текстового психологического портрета}{23}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}Микросервисная архитектура веб-сервиса}{24}{subsection.2.8}%
+\contentsline {subsection}{\numberline {2.9}Технологический стек}{27}{subsection.2.9}%
+\contentsline {subsection}{\numberline {2.10}Описание сервисов}{27}{subsection.2.10}%
+\contentsline {subsection}{\numberline {2.11}Хранение данных}{29}{subsection.2.11}%
+\contentsline {subsection}{\numberline {2.12}Контейнеризация и развёртывание}{29}{subsection.2.12}%
+\contentsline {subsection}{\numberline {2.13}Поток данных при анализе одного рисунка}{30}{subsection.2.13}%
+\contentsline {section}{\numberline {3}ЭКСПЕРИМЕНТАЛЬНОЕ ИССЛЕДОВАНИЕ}{32}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Условия проведения экспериментов}{32}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Метрики качества}{32}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Результаты на тестовой выборке}{33}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Анализ распределения метрик по признакам}{35}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Демонстрация работы программного комплекса}{36}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Анализ временных характеристик}{37}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Тестирование веб-сервиса}{38}{subsection.3.7}%
+\contentsline {subsection}{\numberline {3.8}Сфера применения и ограничения}{39}{subsection.3.8}%
+\contentsline {structure}{\numberline {}ЗАКЛЮЧЕНИЕ}{42}{structure.4}%
+\contentsline {structure}{\numberline {}СПИСОК~ИСПОЛЬЗОВАННЫХ~ИСТОЧНИКОВ}{45}{structure.5}%
+\contentsline {section}{ПРИЛОЖЕНИЕ~А~{Исходный код}}{48}{structure.5}%
+\contentsline {section}{ПРИЛОЖЕНИЕ~Б~{Архитектура нейросетевой модели}}{49}{figure.caption.15}%
+\contentsfinish 

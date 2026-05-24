@@ -1,0 +1,54 @@
+\documentclass{diploma}
+
+\student{Шелаев Серафим Ильич}
+\group{М8О-408Б-22}
+\theme{Распознавание визуальных признаков детских рисунков, ассоциированных с психологическими характеристиками ребёнка, нейросетевыми методами}
+
+\supervisor{Судаков Владимир Анатольевич}
+\firstConsultant{---}
+\secondConsultant{---}
+\reviewer{---}
+
+\faculty{№ 8 <<Компьютерные науки и прикладная математика>>}
+\department{806}
+\speciality{01.03.02 <<Прикладная математика и информатика>>}
+\profile{Информатика}
+
+\departmentFullName{№ 806}
+\headOfDepartment{Крылов Сергей Сергеевич}
+
+\date{\uline{\hspace{24pt}} мая \the\year\ года}
+
+\input{contents/glossary}
+\input{contents/terms}
+
+\addbibresource{main.bib}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\begin{document}
+    \maketitle
+
+    \setcounter{page}{2}
+
+    \include{contents/abstract}
+
+    \tableofcontents
+    \termsanddefenitions   
+    \listofabbreviations    
+
+    \include{contents/introduction}
+
+    \include{contents/chapter-1}
+    \include{contents/chapter-2}    
+    \include{contents/chapter-3}
+
+    \include{contents/conclusion}
+
+    \printbibliography
+
+    \appendix
+    \include{contents/appendix-qr}
+\end{document}
