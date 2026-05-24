@@ -1,0 +1,12 @@
+.env
+shared/data/*.pth
+shared/data/*.csv
+shared/data/*.pkl
+shared/data/*.json
+!shared/data/README.txt
+__pycache__/
+*.pyc
+.venv/
+data/
+postgres_data/
+minio_data/

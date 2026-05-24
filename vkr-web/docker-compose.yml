@@ -1,0 +1,119 @@
+name: vkr-web
+
+x-data-mount: &data-mount
+  - ./shared/data:/data:ro
+
+services:
+
+  encoders-builder:
+    build:
+      context: ./shared/scripts
+    volumes:
+      - ./shared/data:/data
+    profiles: ['tools']
+
+  preprocessing:
+    build:
+      context: ./services/preprocessing
+    environment:
+      OUT_SIZE: ${OUT_SIZE:-384}
+      PAD_PCT: ${PAD_PCT:-0.08}
+    expose: ['8001']
+    restart: unless-stopped
+
+  features:
+    build:
+      context: ./services/features
+    expose: ['8002']
+    restart: unless-stopped
+
+  inference:
+    build:
+      context: ./services/inference
+    environment:
+      IMG_SIZE: ${IMG_SIZE:-320}
+    volumes: *data-mount
+    expose: ['8003']
+    restart: unless-stopped
+
+  interpretation:
+    build:
+      context: ./services/interpretation
+    volumes: *data-mount
+    expose: ['8004']
+    restart: unless-stopped
+
+  report:
+    build:
+      context: ./services/report
+    expose: ['8005']
+    restart: unless-stopped
+
+  api-gateway:
+    build:
+      context: ./services/api-gateway
+    environment:
+      PREPROCESSING_URL:    http://preprocessing:8001
+      FEATURES_URL:         http://features:8002
+      INFERENCE_URL:        http://inference:8003
+      INTERPRETATION_URL:   http://interpretation:8004
+      REPORT_URL:           http://report:8005
+      MINIO_ENDPOINT:       minio:9000
+      MINIO_ROOT_USER:      ${MINIO_ROOT_USER:-minioadmin}
+      MINIO_ROOT_PASSWORD:  ${MINIO_ROOT_PASSWORD:-minioadmin}
+      MINIO_BUCKET:         ${MINIO_BUCKET:-drawings}
+      MINIO_PUBLIC_BASE:    http://localhost:9000
+      PG_DSN:               postgresql://${POSTGRES_USER:-vkr}:${POSTGRES_PASSWORD:-vkr_change_me}@postgres:5432/${POSTGRES_DB:-vkr}
+    ports:
+      - '8000:8000'
+    depends_on:
+      - preprocessing
+      - features
+      - inference
+      - interpretation
+      - report
+      - minio
+      - postgres
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER:     ${POSTGRES_USER:-vkr}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-vkr_change_me}
+      POSTGRES_DB:       ${POSTGRES_DB:-vkr}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./infra/postgres/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    ports: ['5432:5432']
+    restart: unless-stopped
+
+  minio:
+    image: minio/minio:latest
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER:     ${MINIO_ROOT_USER:-minioadmin}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:-minioadmin}
+    volumes:
+      - minio_data:/data
+    ports:
+      - '9000:9000'
+      - '9001:9001'
+    restart: unless-stopped
+
+  minio-init:
+    image: minio/mc:latest
+    depends_on: [minio]
+    entrypoint: >
+      /bin/sh -c "
+      sleep 5;
+      /usr/bin/mc alias set local http://minio:9000 ${MINIO_ROOT_USER:-minioadmin} ${MINIO_ROOT_PASSWORD:-minioadmin};
+      /usr/bin/mc mb --ignore-existing local/${MINIO_BUCKET:-drawings};
+      /usr/bin/mc anonymous set download local/${MINIO_BUCKET:-drawings};
+      echo 'minio bucket ready';
+      "
+    restart: 'no'
+
+volumes:
+  postgres_data:
+  minio_data:

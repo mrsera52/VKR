@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>История анализов</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+  <h1>История анализов</h1>
+  <p><a href="/">← Назад к загрузке</a></p>
+
+  {% if not items %}
+    <p>Анализов пока нет.</p>
+  {% else %}
+    <table class="history">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Дата</th>
+          <th>Файл</th>
+          <th>Источник bbox</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for it in items %}
+        <tr>
+          <td>
+            {% if it.cropped_url %}
+              <img src="{{ it.cropped_url }}" alt="" style="width:60px;height:60px;object-fit:cover;border-radius:4px">
+            {% endif %}
+          </td>
+          <td>{{ it.created_at }}</td>
+          <td>{{ it.original_filename or '—' }}</td>
+          <td><code>{{ it.bbox_source }}</code></td>
+          <td><a href="/report/{{ it.id }}">открыть →</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% endif %}
+</div>
+</body>
+</html>

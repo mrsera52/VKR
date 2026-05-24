@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Анализ детского рисунка</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+  <h1>Анализ детского рисунка</h1>
+  <p class="lead">
+    Загрузи рисунок человека — система проанализирует его по методике А.Л. Венгера
+    и составит психологический портрет.
+  </p>
+
+  <form action="/analyze" method="post" enctype="multipart/form-data" class="upload-form" id="uploadForm">
+    <label class="drop-area" for="fileInput">
+      <input type="file" name="file" id="fileInput" accept="image/*" required>
+      <div class="drop-text">
+        <span class="big">Перетащи файл сюда</span>
+        <span class="small">или нажми для выбора (PNG / JPG)</span>
+      </div>
+    </label>
+    <button type="submit" class="btn-primary">Анализировать</button>
+  </form>
+
+  <div id="loading" style="display:none">
+    <p>Обрабатываем рисунок… (~10-30 сек)</p>
+    <div class="spinner"></div>
+  </div>
+
+  <p class="meta-link"><a href="/history">История анализов →</a></p>
+</div>
+
+<script>
+  document.getElementById('uploadForm').addEventListener('submit', () => {
+    document.getElementById('loading').style.display = 'block';
+  });
+  document.getElementById('fileInput').addEventListener('change', (e) => {
+    if (e.target.files[0]) {
+      const dropText = document.querySelector('.drop-text .big');
+      dropText.textContent = e.target.files[0].name;
+    }
+  });
+</script>
+</body>
+</html>
