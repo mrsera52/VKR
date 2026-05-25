@@ -241,7 +241,16 @@ report --- финальный шаг конвейера. Принимает сл
 
 \subsection{Поток данных при анализе одного рисунка}
 
-При загрузке нового рисунка через веб-интерфейс выполняется следующая последовательность обращений между сервисами:
+При загрузке нового рисунка через веб-интерфейс выполняется последовательность обращений между сервисами, изображённая в виде диаграммы последовательности (UML sequence diagram) на рисунке~\ref{fig:potok-web}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\linewidth,height=0.55\textheight,keepaspectratio]{inc/potok-web.png}
+    \caption{Поток обработки одного рисунка при анализе: последовательность вызовов между микросервисами, MinIO и PostgreSQL}
+    \label{fig:potok-web}
+\end{figure}
+
+Подробное описание шагов:
 
 \begin{enumerate}
     \item \texttt{api-gateway} принимает HTTP POST с файлом изображения, генерирует идентификатор анализа (UUID), сохраняет оригинал в MinIO по ключу \texttt{drawings/\{id\}/original.png};

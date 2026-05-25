@@ -8,6 +8,7 @@ from pathlib import Path
 import httpx
 from fastapi import FastAPI, File, Request, UploadFile
 from fastapi.responses import HTMLResponse, RedirectResponse
+
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
@@ -63,7 +64,6 @@ async def health():
 async def analyze(file: UploadFile = File(...)):
     analysis_id = new_id()
     raw = await file.read()
-
     minio = get_minio()
     original_key = f'{analysis_id}/original.png'
     original_url = put_image(minio, original_key, raw, file.content_type or 'image/png')
@@ -137,6 +137,8 @@ async def analyze(file: UploadFile = File(...)):
         original_filename=file.filename,
         minio_original_key=original_key,
         minio_cropped_key=cropped_key,
+
+
         bbox_source=prep['src'],
         predictions=predictions,
         trait_support=interp['trait_support'],

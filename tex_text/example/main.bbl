@@ -666,40 +666,72 @@
       \verb https://fastapi.tiangolo.com/
       \endverb
     \endentry
-    \entry{uvicorn}{online}{}{}
+    \entry{minio}{online}{}{}
       \name{author}{1}{}{%
-        {{hash=e73069a89f32799b054c4852f92acd55}{%
-           family={Christie},
-           familyi={C\bibinitperiod},
-           given={Tom},
-           giveni={T\bibinitperiod}}}%
+        {{hash=833a7bedb540f2262d3e6e591d17c0af}{%
+           family={{MinIO, Inc.}},
+           familyi={M\bibinitperiod}}}%
       }
       \list{language}{1}{%
         {english}%
       }
-      \strng{namehash}{e73069a89f32799b054c4852f92acd55}
-      \strng{fullhash}{e73069a89f32799b054c4852f92acd55}
-      \strng{fullhashraw}{e73069a89f32799b054c4852f92acd55}
-      \strng{bibnamehash}{e73069a89f32799b054c4852f92acd55}
-      \strng{authorbibnamehash}{e73069a89f32799b054c4852f92acd55}
-      \strng{authornamehash}{e73069a89f32799b054c4852f92acd55}
-      \strng{authorfullhash}{e73069a89f32799b054c4852f92acd55}
-      \strng{authorfullhashraw}{e73069a89f32799b054c4852f92acd55}
+      \strng{namehash}{833a7bedb540f2262d3e6e591d17c0af}
+      \strng{fullhash}{833a7bedb540f2262d3e6e591d17c0af}
+      \strng{fullhashraw}{833a7bedb540f2262d3e6e591d17c0af}
+      \strng{bibnamehash}{833a7bedb540f2262d3e6e591d17c0af}
+      \strng{authorbibnamehash}{833a7bedb540f2262d3e6e591d17c0af}
+      \strng{authornamehash}{833a7bedb540f2262d3e6e591d17c0af}
+      \strng{authorfullhash}{833a7bedb540f2262d3e6e591d17c0af}
+      \strng{authorfullhashraw}{833a7bedb540f2262d3e6e591d17c0af}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{{Uvicorn} --- The lightning-fast {ASGI} server for Python}
-      \field{urlday}{25}
+      \field{title}{{MinIO} --- High Performance Object Storage compatible with Amazon {S3}}
+      \field{urlday}{28}
       \field{urlmonth}{4}
       \field{urlyear}{2026}
       \field{year}{2024}
       \field{urldateera}{ce}
       \verb{urlraw}
-      \verb https://www.uvicorn.org/
+      \verb https://min.io/
       \endverb
       \verb{url}
-      \verb https://www.uvicorn.org/
+      \verb https://min.io/
+      \endverb
+    \endentry
+    \entry{postgres}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=36423acfb135ffe286ea438eafcb0bc6}{%
+           family={{PostgreSQL Global Development Group}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{36423acfb135ffe286ea438eafcb0bc6}
+      \strng{fullhash}{36423acfb135ffe286ea438eafcb0bc6}
+      \strng{fullhashraw}{36423acfb135ffe286ea438eafcb0bc6}
+      \strng{bibnamehash}{36423acfb135ffe286ea438eafcb0bc6}
+      \strng{authorbibnamehash}{36423acfb135ffe286ea438eafcb0bc6}
+      \strng{authornamehash}{36423acfb135ffe286ea438eafcb0bc6}
+      \strng{authorfullhash}{36423acfb135ffe286ea438eafcb0bc6}
+      \strng{authorfullhashraw}{36423acfb135ffe286ea438eafcb0bc6}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{PostgreSQL}: The World's Most Advanced Open Source Relational Database}
+      \field{urlday}{23}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.postgresql.org/
+      \endverb
+      \verb{url}
+      \verb https://www.postgresql.org/
       \endverb
     \endentry
     \entry{pytorch}{inproceedings}{useauthor=false}{}
@@ -763,8 +795,8 @@
       \strng{authornamehash}{724e74fc18651eb78eb82fbcd1d9dfb1}
       \strng{authorfullhash}{48a7dff01ec9361a039ff178d435ae04}
       \strng{authorfullhashraw}{48a7dff01ec9361a039ff178d435ae04}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labeltitlesource}{title}
       \field{booktitle}{Advances in Neural Information Processing Systems}
       \field{internalsortvolume}{32}
@@ -779,120 +811,6 @@
       \endverb
       \verb{url}
       \verb https://papers.nips.cc/paper/9015-pytorch-an-imperative-style-high-performance-deep-learning-library
-      \endverb
-    \endentry
-    \entry{yolov8}{online}{}{}
-      \name{author}{3}{}{%
-        {{hash=c5c5e5cd7f4f477f617289b32613deb0}{%
-           family={Jocher},
-           familyi={J\bibinitperiod},
-           given={Glenn},
-           giveni={G\bibinitperiod}}}%
-        {{hash=ec281637802454e8df4de72f3b1ee401}{%
-           family={Chaurasia},
-           familyi={C\bibinitperiod},
-           given={Ayush},
-           giveni={A\bibinitperiod}}}%
-        {{hash=b8739ebbf3f871d471b6720a02ed541f}{%
-           family={Qiu},
-           familyi={Q\bibinitperiod},
-           given={Jing},
-           giveni={J\bibinitperiod}}}%
-      }
-      \list{language}{1}{%
-        {english}%
-      }
-      \strng{namehash}{dde928f96d7839eed6effd0fbfbe5acc}
-      \strng{fullhash}{dde928f96d7839eed6effd0fbfbe5acc}
-      \strng{fullhashraw}{dde928f96d7839eed6effd0fbfbe5acc}
-      \strng{bibnamehash}{dde928f96d7839eed6effd0fbfbe5acc}
-      \strng{authorbibnamehash}{dde928f96d7839eed6effd0fbfbe5acc}
-      \strng{authornamehash}{dde928f96d7839eed6effd0fbfbe5acc}
-      \strng{authorfullhash}{dde928f96d7839eed6effd0fbfbe5acc}
-      \strng{authorfullhashraw}{dde928f96d7839eed6effd0fbfbe5acc}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{{Ultralytics YOLOv8}}
-      \field{urlday}{23}
-      \field{urlmonth}{4}
-      \field{urlyear}{2026}
-      \field{year}{2023}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://github.com/ultralytics/ultralytics
-      \endverb
-      \verb{url}
-      \verb https://github.com/ultralytics/ultralytics
-      \endverb
-    \endentry
-    \entry{postgres}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=36423acfb135ffe286ea438eafcb0bc6}{%
-           family={{PostgreSQL Global Development Group}},
-           familyi={P\bibinitperiod}}}%
-      }
-      \list{language}{1}{%
-        {english}%
-      }
-      \strng{namehash}{36423acfb135ffe286ea438eafcb0bc6}
-      \strng{fullhash}{36423acfb135ffe286ea438eafcb0bc6}
-      \strng{fullhashraw}{36423acfb135ffe286ea438eafcb0bc6}
-      \strng{bibnamehash}{36423acfb135ffe286ea438eafcb0bc6}
-      \strng{authorbibnamehash}{36423acfb135ffe286ea438eafcb0bc6}
-      \strng{authornamehash}{36423acfb135ffe286ea438eafcb0bc6}
-      \strng{authorfullhash}{36423acfb135ffe286ea438eafcb0bc6}
-      \strng{authorfullhashraw}{36423acfb135ffe286ea438eafcb0bc6}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{{PostgreSQL}: The World's Most Advanced Open Source Relational Database}
-      \field{urlday}{23}
-      \field{urlmonth}{4}
-      \field{urlyear}{2026}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.postgresql.org/
-      \endverb
-      \verb{url}
-      \verb https://www.postgresql.org/
-      \endverb
-    \endentry
-    \entry{minio}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=833a7bedb540f2262d3e6e591d17c0af}{%
-           family={{MinIO, Inc.}},
-           familyi={M\bibinitperiod}}}%
-      }
-      \list{language}{1}{%
-        {english}%
-      }
-      \strng{namehash}{833a7bedb540f2262d3e6e591d17c0af}
-      \strng{fullhash}{833a7bedb540f2262d3e6e591d17c0af}
-      \strng{fullhashraw}{833a7bedb540f2262d3e6e591d17c0af}
-      \strng{bibnamehash}{833a7bedb540f2262d3e6e591d17c0af}
-      \strng{authorbibnamehash}{833a7bedb540f2262d3e6e591d17c0af}
-      \strng{authornamehash}{833a7bedb540f2262d3e6e591d17c0af}
-      \strng{authorfullhash}{833a7bedb540f2262d3e6e591d17c0af}
-      \strng{authorfullhashraw}{833a7bedb540f2262d3e6e591d17c0af}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{{MinIO} --- High Performance Object Storage compatible with Amazon {S3}}
-      \field{urlday}{28}
-      \field{urlmonth}{4}
-      \field{urlyear}{2026}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://min.io/
-      \endverb
-      \verb{url}
-      \verb https://min.io/
       \endverb
     \endentry
     \entry{docker}{online}{}{}
@@ -929,6 +847,88 @@
       \verb https://www.docker.com/
       \endverb
     \endentry
+    \entry{yolov8}{online}{}{}
+      \name{author}{3}{}{%
+        {{hash=c5c5e5cd7f4f477f617289b32613deb0}{%
+           family={Jocher},
+           familyi={J\bibinitperiod},
+           given={Glenn},
+           giveni={G\bibinitperiod}}}%
+        {{hash=ec281637802454e8df4de72f3b1ee401}{%
+           family={Chaurasia},
+           familyi={C\bibinitperiod},
+           given={Ayush},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b8739ebbf3f871d471b6720a02ed541f}{%
+           family={Qiu},
+           familyi={Q\bibinitperiod},
+           given={Jing},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{dde928f96d7839eed6effd0fbfbe5acc}
+      \strng{fullhash}{dde928f96d7839eed6effd0fbfbe5acc}
+      \strng{fullhashraw}{dde928f96d7839eed6effd0fbfbe5acc}
+      \strng{bibnamehash}{dde928f96d7839eed6effd0fbfbe5acc}
+      \strng{authorbibnamehash}{dde928f96d7839eed6effd0fbfbe5acc}
+      \strng{authornamehash}{dde928f96d7839eed6effd0fbfbe5acc}
+      \strng{authorfullhash}{dde928f96d7839eed6effd0fbfbe5acc}
+      \strng{authorfullhashraw}{dde928f96d7839eed6effd0fbfbe5acc}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Ultralytics YOLOv8}}
+      \field{urlday}{23}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/ultralytics/ultralytics
+      \endverb
+      \verb{url}
+      \verb https://github.com/ultralytics/ultralytics
+      \endverb
+    \endentry
+    \entry{uvicorn}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=e73069a89f32799b054c4852f92acd55}{%
+           family={Christie},
+           familyi={C\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{e73069a89f32799b054c4852f92acd55}
+      \strng{fullhash}{e73069a89f32799b054c4852f92acd55}
+      \strng{fullhashraw}{e73069a89f32799b054c4852f92acd55}
+      \strng{bibnamehash}{e73069a89f32799b054c4852f92acd55}
+      \strng{authorbibnamehash}{e73069a89f32799b054c4852f92acd55}
+      \strng{authornamehash}{e73069a89f32799b054c4852f92acd55}
+      \strng{authorfullhash}{e73069a89f32799b054c4852f92acd55}
+      \strng{authorfullhashraw}{e73069a89f32799b054c4852f92acd55}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Uvicorn} --- The lightning-fast {ASGI} server for Python}
+      \field{urlday}{25}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.uvicorn.org/
+      \endverb
+      \verb{url}
+      \verb https://www.uvicorn.org/
+      \endverb
+    \endentry
     \entry{f1-score}{article}{}{}
       \name{author}{1}{}{%
         {{hash=d0b466dcade805f3ad3c4a9ac249b417}{%
@@ -948,8 +948,8 @@
       \strng{authornamehash}{d0b466dcade805f3ad3c4a9ac249b417}
       \strng{authorfullhash}{d0b466dcade805f3ad3c4a9ac249b417}
       \strng{authorfullhashraw}{d0b466dcade805f3ad3c4a9ac249b417}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Teach Tutor Mater}
